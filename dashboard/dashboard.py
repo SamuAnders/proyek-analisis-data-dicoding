@@ -2,8 +2,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
-from babel.numbers import format_currency
-sns.set(style='dark')
 
 # Membuat sebuah dataset function to get all order by category
 def create_sum_orders_category_df (df):
@@ -65,7 +63,7 @@ with col1:
     st.metric("Total orders", value=total_orders)
  
 with col2:
-    total_revenue = format_currency(daily_trasanction_happen_df.revenue.sum(), "USD", locale='es_CO') 
+    total_revenue = daily_trasanction_happen_df.revenue.sum() 
     st.metric("Total Revenue", value=total_revenue)
  
 fig, ax = plt.subplots(figsize=(16, 8))
