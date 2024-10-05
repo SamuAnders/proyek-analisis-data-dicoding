@@ -2,5 +2,3 @@ matplotlib
 pandas
 streamlit
 seaborn
-os
-jupyter
